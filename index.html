@@ -2,11 +2,232 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Hola Mundo</title>
+  <title>Sabores del Ecuador</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff8e1;
+      color: #3e2723;
+    }
+
+    .sidebar {
+      background-color: #d4a373;
+      padding: 20px;
+      width: 200px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      text-align: center;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      color: #fff7d4;
+    }
+
+    .titulo-principal {
+      margin-left: 220px;
+      padding: 30px;
+      text-align: center;
+      background-color: #fff8e1;
+      color: #ef6c00;
+      font-size: 2.5em;
+    }
+
+    .content {
+      margin-left: 220px;
+      padding: 30px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #d4a373;
+    }
+
+    .section h3 {
+      color: #ef6c00;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #d4a373;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #fff176;
+      color: #3e2723;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+      color: #6d4c41;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form input[type="submit"] {
+      background-color: #e53935;
+      color: white;
+      border: none;
+      margin-top: 15px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #6d4c41;
+    }
+
+    .image-guide {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .image-guide img {
+      width: 180px;
+      border-radius: 10px;
+      border: 2px solid #8bc34a;
+    }
+  </style>
 </head>
 <body>
-  <h1>¡Hola Mundo!</h1>
-  <p>Este es mi primera página web en HTML.</p>
+
+  <div class="sidebar">
+    <a href="#inicio">Inicio</a>
+    <a href="#acerca">Acerca</a>
+    <a href="#platos">Platos</a>
+    <a href="#formulario">Formulario</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+  <div class="titulo-principal">
+    <h1>🍽️ Sabores del Ecuador</h1>
+  </div>
+
+  <div class="content">
+    <div class="section" id="inicio">
+      <h3>Inicio</h3>
+      <p>
+        Bienvenido a Sabores del Ecuador, una experiencia culinaria que te llevará por las regiones más sabrosas del país. Descubre platos únicos y tradiciones que se cocinan con historia.
+      </p>
+    </div>
+
+    <div class="section" id="acerca">
+      <h3>Acerca de</h3>
+      <p>
+        Esta página es una guía para conocer la gastronomía ecuatoriana. Aquí aprenderás sobre ingredientes locales, recetas tradicionales y destinos donde la comida es protagonista.
+      </p>
+    </div>
+
+    <div class="section" id="platos">
+      <h3>Platos típicos</h3>
+      <p>Estos son algunos de los platos más representativos:</p>
+      <table>
+        <tr>
+          <th>Plato</th>
+          <th>Región</th>
+          <th>Ingredientes</th>
+          <th>Tipo</th>
+        </tr>
+        <tr>
+          <td>Hornado</td>
+          <td>Sierra</td>
+          <td>Cerdo, mote, llapingacho</td>
+          <td>Principal</td>
+        </tr>
+        <tr>
+          <td>Encebollado</td>
+          <td>Costa</td>
+          <td>Pescado, yuca, cebolla</td>
+          <td>Desayuno</td>
+        </tr>
+        <tr>
+          <td>Bolón de verde</td>
+          <td>Costa</td>
+          <td>Plátano verde, queso o chicharrón</td>
+          <td>Desayuno</td>
+        </tr>
+        <tr>
+          <td>Fanesca</td>
+          <td>Nacional</td>
+          <td>Granos, pescado seco, leche</td>
+          <td>Estacional</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section" id="formulario">
+      <h3>Formulario</h3>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="plato">Plato favorito:</label>
+        <input type="text" id="plato" name="plato">
+
+        <label for="region">Región que deseas visitar:</label>
+        <select id="region" name="region">
+          <option value="Costa">Costa</option>
+          <option value="Sierra">Sierra</option>
+          <option value="Amazonía">Amazonía</option>
+          <option value="Galápagos">Galápagos</option>
+        </select>
+
+        <input type="submit" value="Enviar">
+      </form>
+    </div>
+
+    <div class="section" id="contacto">
+      <h3>Contacto</h3>
+      <p><b>Sabores del Ecuador</b></p>
+      <p>Tel: 0948752136</p>
+      <p>Email: <a href="mailto:info@saboresecuador.com">info@saboresecuador.com</a></p>
+      <p>Email: <a href="mailto:turismo@ecuadortravel.ec">turismo@ecuadortravel.ec</a></p>
+
+      <div class="image-guide">
+        <h4>Guía visual:</h4>
+        <img src="Imagen/guia.jpg" alt="Imagen de guía gastronómica">
+        <p style="font-size: 0.9em;">Ejemplo de imagen para mostrar platos típicos o regiones turísticas.</p>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2025 Sabores del Ecuador · Todos los derechos reservados
+    </footer>
+  </div>
+
 </body>
 </html>
-
